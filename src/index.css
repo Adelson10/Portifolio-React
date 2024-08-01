@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+   --body-background: #111;
+   --brand: #0aff9d;
+   --text: #ebecf3;
+   --text-xs: 1.6rem;
+   --text-sm: 1.8rem;
+   --text-md: 2.2rem;
+   --text-lg: 3.6rem;
+   --text-xl: 5.6rem;
+   --text-2xl: 9.6rem;
+   --bg-opaque: hsla(0, 0%, 7%, .25);
+}
+
+body, html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background: var(--body-background);
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;     
+}
+
+*::selection {
+  color: var(--body-background);
+  background-color: var(--brand);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+span, strong {
+  color: var(--brand);
+}
+
+section h1, h2, h3 {
+  color: var(--text);
+}
+
+section .subTitle {
+  margin: 0;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+article {
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+section {
+  margin: 0 2rem;
+  height: 100vh;
+}
+
+p {
+  color: var(--text);
+}
+
+.container .Title {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.Title h1 {
+  font-size: var(--text-sm);
+}
+
+.container .line {
+  flex-grow: 1;
+  height: 1px;
+  background: var(--text);
+  opacity: .3;
+}
+
+@media (min-width: 960px ) {
+  section {
+    max-width: 70rem;
+    margin: auto !important;
+    height: calc(100vh - 90px);
+    padding-top: 90px !important;
+  }
+
+  .Title h1 {
+    font-size: var(--text-lg);
+    margin: 2rem 0;
+  }
+}

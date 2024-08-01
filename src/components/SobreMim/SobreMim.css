@@ -1,0 +1,37 @@
+section .container {
+
+}
+
+.Foto__SobreMim {
+    max-width: 50%;
+    border-radius: 1rem;
+    margin: 2rem 0;
+}
+
+.skills_SobreMim {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 30% 30% 30%;
+    width: auto;
+    list-style: none;
+    padding: 0;
+}
+
+.box_skills_sobreMim {
+    border-radius: .5rem;
+    border: 2px solid #eee;
+    background-color: #fff;
+    padding: .8rem;
+    text-align: center;
+}
+
+.Titulo_Skills_SobreMim {
+    margin: .2rem 0;  
+    font-size: 0.9rem;
+}
+
+.SubTitulo_Skills_SobreMim {
+    color: var(--body-color-normal);
+    font-size: .8rem;
+    margin: .2rem 0;
+}

@@ -1,0 +1,17 @@
+.Button {
+    border: none;
+    color: var(--body-background);
+    padding: .5rem 1.5rem;
+    background-color: var(--brand);
+    border-radius: .5rem;
+
+    text-decoration: none;
+    display: inline-block;
+    margin: 1rem 0;
+    font-weight: 500;
+}
+
+.Button:hover,.Button::selection {
+    color: var(--body-color-bold);
+    cursor: pointer;
+}
