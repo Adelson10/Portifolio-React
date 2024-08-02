@@ -18,7 +18,7 @@ section#SobreMim {
     margin-bottom: 1.5rem;
 }
 
-svg {
+h4 svg {
     color: var(--brand);
 }
 

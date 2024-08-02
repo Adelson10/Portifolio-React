@@ -5,20 +5,24 @@ import { WidthScreenContext } from './hooks/WidthScreen/useWidthScreen';
 import SobreMim from './components/SobreMim/SobreMim';
 import { BrowserRouter } from 'react-router-dom';
 import Projetos from './components/Projetos/Projetos';
+import Modal from './utils/Modal/Modal';
 
 function App() {
 
   return (
     <>
-      <BrowserRouter>
-        <WidthScreenContext>
-          <Header>
-              <Apresentacao />
-              <SobreMim />
-              <Projetos />
-          </Header>
-        </ WidthScreenContext>
-      </BrowserRouter>
+        <BrowserRouter>
+          <WidthScreenContext>
+            <div>
+              <Header>
+                  <Apresentacao />
+                  <SobreMim />
+                  <Projetos />
+              </Header>
+            </div>
+            <Modal />
+          </WidthScreenContext>
+        </BrowserRouter>
     </>
   )
 }

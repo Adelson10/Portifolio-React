@@ -1,0 +1,83 @@
+.containerProjeto .descProjeto {
+    font-weight: 200;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.BoxDescProjeto span {
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.BoxDescProjeto span:hover {
+    text-decoration: underline;
+}
+
+.TitleProjeto {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.botoes {
+    width: fit-content;
+    display: flex;
+    gap: 1rem;
+}
+
+.TitleProjeto h2 {
+    font-size: 1.3rem;
+    margin: 0;
+    width: fit-content;
+} 
+
+.containerProjeto .TecProjeto {
+    color: var(--brand);
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin: .5rem 0;
+}
+
+.containerProjeto .BoxProjeto{
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: var(--background-light);
+    cursor: pointer;
+    position: relative;
+    border-radius: .8rem;
+    overflow: hidden;
+}
+
+.BoxProjeto img {
+    width: 80%;
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    translate: -50% 10%;
+    border-radius: .4rem;
+    rotate: 0deg;
+    transition: all .25s;
+}
+
+.BoxProjeto img:hover {
+    width: 85%;
+    rotate: 2deg;
+}
+
+.BoxDescProjeto {
+    padding: 1rem 0;
+}
+
+.botoes svg {
+    height: var(--text-xs);
+    width: var(--text-xs);
+    color: var(--text);
+    opacity: .5;
+}
+
+.botoes svg:hover,
+svg:active {
+    color: var(--brand);
+    opacity: 1;
+}

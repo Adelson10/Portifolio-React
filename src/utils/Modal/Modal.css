@@ -1,0 +1,87 @@
+.Modal__Background {
+    position: fixed;
+    height: 100vh;
+    padding: 4.8rem 1.2rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow-y: scroll;
+    background: var(--bg-opaque);
+    z-index: 999;
+
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-sizing: border-box;
+}
+
+.Container_Modal {
+    width: 100%;
+    max-width: 700px;
+    height: fit-content;
+    height: -moz-fit-content;
+    overflow: hidden;
+    z-index: 1000;
+    cursor: auto;
+    
+    border-radius: .6rem;
+    background: var(--background-light);
+}
+
+.Container_Modal h2 {
+    margin: 0;
+    font-size: var(--text-md);
+}
+
+.Container_Modal h3 {
+    margin: .2rem 0 .5rem 0;
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--brand);
+}
+
+.Container_Modal img{
+    width: 100%;
+}
+
+.Title_dateModal {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: .5rem;
+}
+
+.botoes_Modal {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.botoes_Modal a {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    color: var(--brand);
+}
+
+.botoes_Modal a:hover {
+    text-decoration: underline;
+}
+
+.Container_Modal .dateModal {
+    padding: 1.6rem;
+}
+
+.close {
+    background: none;
+    border: none;
+    color: var(--text);
+    font-size: var(--text-md);
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+    cursor: pointer;
+}

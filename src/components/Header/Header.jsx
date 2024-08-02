@@ -3,7 +3,7 @@ import { BsHouseDoor,BsPerson,BsFileEarmarkMedical,BsSuitcaseLg,BsImage,BsSend,B
 import './Header.css';
 import { useWidthScreen } from '../../hooks/WidthScreen/useWidthScreen';
 import { Link } from 'react-router-dom';
-import Button from '../../utils/components/Button';
+import Button from '../../utils/Button/Button';
 import curriculo from '../../assets/curriculo/Curriculo Adelson.pdf';
 
 const navSpy = [
@@ -27,7 +27,7 @@ const navSpy = [
 const Header = ({children}) => {
   const [menuMobile, setMenuMobile] = useState(false);
   const [InitialMenuMobile, setInitialMenuMobile] = useState(false);
-  const [activeLink, setActiveLink] = useState("hero");
+  const [activeLink, setActiveLink] = useState('Inicio');
   const { width } = useWidthScreen();
 
   function scrollToSection(sectionId){
@@ -61,7 +61,6 @@ const Header = ({children}) => {
 
   useEffect(() => {
     window.addEventListener("scroll", determineActiveSection);
-    setActiveLink('Inicio');
     return () => {
       window.removeEventListener("scroll", determineActiveSection);
     }

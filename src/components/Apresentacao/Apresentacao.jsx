@@ -2,7 +2,7 @@ import React from 'react';
 import './Apresentacao.css';
 import { BsGithub,BsInstagram,BsLinkedin,BsSend,BsArrowDown } from "react-icons/bs";
 import { useWidthScreen } from '../../hooks/WidthScreen/useWidthScreen';
-import Button from '../../utils/components/Button';
+import Button from '../../utils/Button/Button';
 
 const Apresentacao = () => {
 

@@ -80,7 +80,7 @@ p {
   font-size: var(--text-sm);
 }
 
-.Title .line {
+.line {
   flex-grow: 1;
   height: 1px;
   background: var(--text);
