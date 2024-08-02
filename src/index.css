@@ -86,7 +86,7 @@ p {
     max-width: 70rem;
     margin: auto !important;
     height: calc(100vh - 90px);
-    padding-top: 90px !important;
+    padding: 90px 1rem 0 1rem !important;
   }
 
   .Title h1 {

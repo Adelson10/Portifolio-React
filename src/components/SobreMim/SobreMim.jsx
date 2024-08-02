@@ -1,9 +1,7 @@
 import React from 'react'
 import Button from '../../utils/components/Button';
-import { BsFileEarmarkMedical,BsLaptop,BsSuitcase,BsHeadset } from "react-icons/bs";
-import Foto from '../../assets/apresentacao/imagem.png';
+import { BsFileEarmarkMedical } from "react-icons/bs";
 import './SobreMim.css';
-import curriculo from '../../assets/curriculo/Curriculo Adelson.pdf';
 
 const SobreMim = () => {
   return (
@@ -18,7 +16,6 @@ const SobreMim = () => {
             <p>Tenho uma sólida formação em desenvolvimento front-end, onde me especializei na criação de páginas web atraentes e funcionais. Minha paixão pelo design e pela experiência do usuário me impulsionou a aprimorar continuamente minhas habilidades, garantindo que cada projeto entregue seja visualmente agradável e intuitivo para os usuários finais.</p>
             <p>No âmbito do desenvolvimento back-end, possuo conhecimentos em Node.js. Tenho trabalhado para melhorar continuamente minhas habilidades em back-end, desenvolvendo servidores, gerenciando bancos de dados e implementando lógica de negócios. Essa busca constante por aprendizado me permite criar soluções mais integradas e eficientes.</p>
             <p>Meu compromisso com a excelência e a inovação se reflete em cada projeto que realizo, onde busco constantemente novas tecnologias e abordagens para entregar resultados de alta qualidade que atendam e superem as expectativas dos clientes.</p>
-            <Button href={curriculo} icon={<BsFileEarmarkMedical />}>Baixar CV  </Button>
         </div>
     </article>
     </section>
