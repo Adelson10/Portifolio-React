@@ -18,9 +18,9 @@ const navSpy = [
     label: 'Sobre Mim'
   },
   {
-    sectionId: 'Servicos',
+    sectionId: 'Projetos',
     icon: (<BsSuitcaseLg />),
-    label: 'Serviços'
+    label: 'Projetos'
   },
 ]
 

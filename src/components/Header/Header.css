@@ -11,6 +11,7 @@
       padding: 1rem;
       box-shadow: 0 0 8px #0000;
       transition: box-shadow .5s ease-in-out;
+      z-index: 999;
   }
 
   .Header__Box {
@@ -86,12 +87,21 @@
     margin: auto 0;
   }
 
+  header li {
+    flex-grow: 1;
+  }
+
   header ul {
     padding: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    justify-content: space-around;
     gap: 1rem;
     margin: auto;
+    flex-wrap: wrap;
+  }
+
+  header .Button {
+    width: 100%;
   }
 
   header li > a {
@@ -155,5 +165,13 @@
 
   header li > a {
     font-size: 1.1rem;
+  }
+
+  header li {
+    flex-grow: 0;
+  }
+
+  header .Button {
+    width: auto;
   }
 }

@@ -1,37 +1,68 @@
-section .container {
-
+section#SobreMim {
+    height: 100%;
 }
 
-.Foto__SobreMim {
-    max-width: 50%;
-    border-radius: 1rem;
-    margin: 2rem 0;
+.Texto_SobreMim {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.skills_SobreMim {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: 30% 30% 30%;
-    width: auto;
-    list-style: none;
-    padding: 0;
+.Habilidades__frontEnd h4,
+.Habilidades__backEnd h4{
+    font-size: var(--text-xs);
+    margin: 0;
+
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    margin-bottom: 1.5rem;
 }
 
-.box_skills_sobreMim {
-    border-radius: .5rem;
-    border: 2px solid #eee;
-    background-color: #fff;
-    padding: .8rem;
-    text-align: center;
+svg {
+    color: var(--brand);
 }
 
-.Titulo_Skills_SobreMim {
-    margin: .2rem 0;  
-    font-size: 0.9rem;
+.Habilidades_grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .8rem;
+    margin-bottom: 2rem;
+    font-size: 1rem;
 }
 
-.SubTitulo_Skills_SobreMim {
-    color: var(--body-color-normal);
-    font-size: .8rem;
-    margin: .2rem 0;
+.chip {
+    background: var(--background-light);
+    padding: .2rem .8rem;
+    border-radius: 999px;
+    color: var(--text);
+}
+
+.Paragrafo_SobreMim {
+    margin: 0;
+    margin-bottom: 1.8rem;
+    font-weight: 200;
+    text-align: start;
+    font-size: 1.1rem;
+}
+
+.Paragrafo_SobreMim.Primeiro::first-letter {
+    background: var(--background-light);
+    padding: .4rem .6rem;
+    border-radius: .4rem;
+    font-size: var(--text-xs);
+    font-weight: 700;
+    margin-right: .3rem;
+    float: left;
+}
+
+@media (min-width: 960px ) {
+    .Texto_SobreMim {
+        display: grid;
+        grid-template-columns: 2fr 300px;
+        grid-gap: 2.4rem;
+    }
+
+    section#SobreMim {
+        height: calc(80vh - 90px);
+    }
 }

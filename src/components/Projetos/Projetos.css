@@ -1,0 +1,7 @@
+#Projetos .Title > h1 {
+    order: 2;
+}
+
+#Projetos .Title .line {
+    order: 1;
+}

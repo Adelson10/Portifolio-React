@@ -2,6 +2,7 @@
 
 * {
    --body-background: #111;
+   --background-light: #232323;
    --brand: #0aff9d;
    --text: #ebecf3;
    --text-xs: 1.6rem;
@@ -19,7 +20,6 @@ body, html {
   box-sizing: border-box;
   background: var(--body-background);
   font-family: "Poppins", sans-serif;
-  scroll-behavior: smooth;     
 }
 
 *::selection {
@@ -39,7 +39,7 @@ span, strong {
   color: var(--brand);
 }
 
-section h1, h2, h3 {
+section h1, h2, h3, h4 {
   color: var(--text);
 }
 
@@ -70,11 +70,17 @@ p {
   gap: 2rem;
 }
 
+.Title {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
 .Title h1 {
   font-size: var(--text-sm);
 }
 
-.container .line {
+.Title .line {
   flex-grow: 1;
   height: 1px;
   background: var(--text);
@@ -85,12 +91,13 @@ p {
   section {
     max-width: 70rem;
     margin: auto !important;
-    height: calc(100vh - 90px);
+    height: calc(80vh - 90px);
     padding: 90px 1rem 0 1rem !important;
   }
 
   .Title h1 {
     font-size: var(--text-lg);
-    margin: 2rem 0;
+    margin: 0;
+    margin-bottom: 1rem;
   }
 }
