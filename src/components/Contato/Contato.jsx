@@ -1,8 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { BsEnvelope } from "react-icons/bs";
+import './Contato.css';
 
-const Contanto = () => {
+const Contato = () => {
   return (
     <section id="Contato">
         <h1>Contato<span>.</span></h1>
@@ -12,4 +13,4 @@ const Contanto = () => {
   )
 }
 
-export default Contanto;
+export default Contato;

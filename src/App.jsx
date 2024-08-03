@@ -7,7 +7,7 @@ import { BrowserRouter } from 'react-router-dom';
 import Projetos from './components/Projetos/Projetos';
 import Modal from './utils/Modal/Modal';
 import Experiencia from './components/Experiencia/Experiencia';
-import Contanto from './components/Contato/Contanto';
+import Contato from './components/Contato/Contato';
 
 function App() {
 
@@ -21,7 +21,7 @@ function App() {
                   <SobreMim />
                   <Projetos />
                   <Experiencia />
-                  <Contanto />
+                  <Contato />
               </Header>
             </div>
             <Modal />
