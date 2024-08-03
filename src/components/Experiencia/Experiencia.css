@@ -6,6 +6,10 @@
     margin-bottom: .5rem;
 }
 
+.Experiencia__Dados p {
+    text-align: end;
+}
+
 #Experiencia {
     height: 100%;
 }

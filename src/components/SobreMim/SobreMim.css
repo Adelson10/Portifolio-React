@@ -15,7 +15,7 @@ section#SobreMim {
     display: flex;
     align-items: center;
     gap: .8rem;
-    margin-bottom: 1.5rem;
+    margin: 1rem 0;
 }
 
 h4 svg {
@@ -64,5 +64,10 @@ h4 svg {
 
     section#SobreMim {
         height: calc(80vh - 90px);
+    }
+
+    .Habilidades__frontEnd h4,
+    .Habilidades__backEnd h4{
+        margin: 0 0 1.5rem 0;
     }
 }

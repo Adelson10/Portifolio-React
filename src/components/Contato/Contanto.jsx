@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { BsEnvelope } from "react-icons/bs";
+import './Contato.css';
 
 const Contanto = () => {
   return (

@@ -1,9 +1,10 @@
 import React from 'react';
 import './Button.css';
 
-const Button = ({href,children,icon}) => {
+const Button = ({href,children,icon,Iconizado}) => {
+  
   return (
-    <a className="Button" href={href} target="_blank">{children}  {icon}</a>
+    <a className={`Button ${ Iconizado ? Iconizado : ''}`} href={href} target="_blank">{children}  {icon}</a>
   )
 }
 
