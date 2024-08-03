@@ -48,7 +48,7 @@ const Experiencia = () => {
           </div>
           <p>{resumo}</p>
           <ul className='Habilidades_grid'>
-            {tecnologias.map((tecnologia) => (<li className='chip' key={tecnologia}>{tecnologia}</li>))}
+            {tecnologias.map((tecnologia,i) => (<li className='chip' key={tecnologia}>{tecnologia}</li>))}
           </ul>
         </div>
       )

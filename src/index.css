@@ -93,7 +93,7 @@ p {
   section {
     max-width: 70rem;
     margin: auto !important;
-    height: calc(80vh - 90px);
+    height: calc(80vh - 90px) !important;
     padding: 90px 1rem 0 1rem !important;
   }
 

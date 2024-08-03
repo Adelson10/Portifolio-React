@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    height: 100%;
 }
 
 .Apresentacao_Texto h1 {
@@ -82,7 +83,7 @@
     margin: 0;
  }
 
-@media (min-width: 960px ) {
+@media ( min-width: 960px ) {
     .Apresentacao {
         display: grid;
         grid-template-columns: 10% 50% 40%;
@@ -90,6 +91,7 @@
         align-items: center;
         flex-wrap: wrap;
         padding-top: 90px;
+        
     }
 
     .Apresentacao_Texto h1 {
