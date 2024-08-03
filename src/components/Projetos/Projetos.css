@@ -6,9 +6,20 @@
     order: 1;
 }
 
+#Projetos {
+    height: 100%;
+}
+
 .Projetos {
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: 2rem;
+}
+
+@media (min-width: 960px) {
+    .Projetos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 }

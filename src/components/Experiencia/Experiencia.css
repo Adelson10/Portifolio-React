@@ -1,0 +1,18 @@
+.Experiencia__Dados {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: .5rem;
+}
+
+
+.Experiencia__Dados h4{
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.Experiencia_Ocupacao {
+    font-weight: 700;
+    font-size: 1.3rem;
+}

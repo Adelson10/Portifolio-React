@@ -26,6 +26,30 @@ const dateProjets = [{
   </>),
   GitHub: 'https://github.com/Adelson10/Estudos-NodeJs-2',
   Href: 'https://city.adelsonbarros.com',
+},
+{
+  image: Example,
+  title: 'Paint.app',
+  tecProjeto: 'Flutter - MUI - Python - FastAPI',
+  prevProjeto: 'A social community for painters to connect with others in their community. I handle everything backend (50K monthly active users).',
+  descProjeto: (<>
+  <p>The Canvas Club is a social community for painters to connect with others in their community. I work primarily on the backend, a collection of Node & Express microservices. Data is stored primarily in Postgres & cached in Redis.</p>
+  <p>The team in total consists of 5 developers. This is a passion project for all of us. Because this isn't real, here's some gibberish to fill space : Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur quia officia odio nulla consectetur aperiam ad tempora magni magnam nesciunt. Fuga id sapiente facere ipsa eius exercitationem officiis deleniti, rerum dolorum. Deserunt soluta modi culpa animi.</p>
+  </>),
+  GitHub: 'https://github.com/Adelson10/Estudos-NodeJs-2',
+  Href: 'https://city.adelsonbarros.com',
+},
+{
+  image: Example,
+  title: 'Paint.app',
+  tecProjeto: 'Flutter - MUI - Python - FastAPI',
+  prevProjeto: 'A social community for painters to connect with others in their community. I handle everything backend (50K monthly active users).',
+  descProjeto: (<>
+  <p>The Canvas Club is a social community for painters to connect with others in their community. I work primarily on the backend, a collection of Node & Express microservices. Data is stored primarily in Postgres & cached in Redis.</p>
+  <p>The team in total consists of 5 developers. This is a passion project for all of us. Because this isn't real, here's some gibberish to fill space : Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur quia officia odio nulla consectetur aperiam ad tempora magni magnam nesciunt. Fuga id sapiente facere ipsa eius exercitationem officiis deleniti, rerum dolorum. Deserunt soluta modi culpa animi.</p>
+  </>),
+  GitHub: 'https://github.com/Adelson10/Estudos-NodeJs-2',
+  Href: 'https://city.adelsonbarros.com',
 }
 ]
 

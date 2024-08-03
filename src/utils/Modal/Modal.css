@@ -7,7 +7,7 @@
     right: 0;
     overflow-y: scroll;
     background: var(--bg-opaque);
-    z-index: 999;
+    z-index: 1000;
 
     display: flex;
     justify-content: center;
@@ -24,7 +24,7 @@
     height: fit-content;
     height: -moz-fit-content;
     overflow: hidden;
-    z-index: 1000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
     cursor: auto;
     
     border-radius: .6rem;

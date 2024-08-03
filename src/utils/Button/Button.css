@@ -25,3 +25,9 @@
     color: var(--body-background);
     cursor: pointer;
 }
+
+@media (min-width: 960px) {
+    .Button {
+        margin: 0;
+    }
+}

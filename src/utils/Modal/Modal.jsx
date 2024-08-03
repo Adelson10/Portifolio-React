@@ -1,4 +1,3 @@
-import React from 'react'
 import { useWidthScreen } from '../../hooks/WidthScreen/useWidthScreen';
 import { Link } from 'react-router-dom';
 import { BsGithub,BsBoxArrowRight,BsX } from "react-icons/bs";
@@ -6,10 +5,22 @@ import './Modal.css';
 
 const Modal = () => {
   const { dateModal, resetDateModal } = useWidthScreen();
+
+  function handleClick() {
+    document.querySelector('body').style.overflowY = 'scroll';
+    resetDateModal();
+  }
+
+  function handleCloseOut(e) {
+    if (e.target.className==='Modal__Background'){
+      document.querySelector('body').style.overflowY = 'scroll';
+      resetDateModal();
+    }
+  }
   
   if (dateModal) return (
-    <div className='Modal__Background' onClick={resetDateModal}>
-            <button className='close' onClick={resetDateModal}><BsX /></button>
+    <div className='Modal__Background' onClick={handleCloseOut} >
+            <button className='close' onClick={handleClick}><BsX /></button>
             <div className="Container_Modal">
                 <img src={dateModal.image} alt="" />
                 <div className="dateModal">

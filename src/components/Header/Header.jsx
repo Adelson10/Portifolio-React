@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { BsHouseDoor,BsPerson,BsFileEarmarkMedical,BsSuitcaseLg,BsImage,BsSend,BsUiChecksGrid,BsXLg } from "react-icons/bs";
+import { BsHouseDoor,BsPerson,BsFileEarmarkMedical,BsSuitcaseLg,BsUiChecksGrid,BsXLg } from "react-icons/bs";
 import './Header.css';
 import { useWidthScreen } from '../../hooks/WidthScreen/useWidthScreen';
 import { Link } from 'react-router-dom';
@@ -21,6 +21,11 @@ const navSpy = [
     sectionId: 'Projetos',
     icon: (<BsSuitcaseLg />),
     label: 'Projetos'
+  },
+  {
+    sectionId: 'Experiencia',
+    icon: (<BsSuitcaseLg />),
+    label: 'Experiência'
   },
 ]
 

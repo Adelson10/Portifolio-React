@@ -15,7 +15,7 @@ const BoxProjetos = (props) => {
   return (
     <div className='containerProjeto'>
         <div className='BoxProjeto'>
-            <img src={props.image} alt='Projeto'/>
+            <img src={props.image} alt='Projeto' onClick={handleClick}/>
         </div>
         <div className='BoxDescProjeto'>
             <div className='TitleProjeto'>

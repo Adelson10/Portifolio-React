@@ -6,6 +6,7 @@ import SobreMim from './components/SobreMim/SobreMim';
 import { BrowserRouter } from 'react-router-dom';
 import Projetos from './components/Projetos/Projetos';
 import Modal from './utils/Modal/Modal';
+import Experiencia from './components/Experiencia/Experiencia';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
                   <Apresentacao />
                   <SobreMim />
                   <Projetos />
+                  <Experiencia />
               </Header>
             </div>
             <Modal />
