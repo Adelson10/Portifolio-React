@@ -6,6 +6,21 @@
     margin-bottom: .5rem;
 }
 
+#Experiencia {
+    height: 100%;
+}
+
+.Experiencia {
+    padding: 0 1.2rem 1.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--background-light);
+}
+
+.Experiencia p {
+    margin-bottom: 1rem;
+    font-weight: 200;
+    font-size: 1rem;
+}
 
 .Experiencia__Dados h4{
     margin: 0;
@@ -15,4 +30,10 @@
 .Experiencia_Ocupacao {
     font-weight: 700;
     font-size: 1.3rem;
+}
+
+@media (min-width: 960px ) {
+    #Experiencia {
+        height: 100vh !important;
+    }
 }

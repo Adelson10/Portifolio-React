@@ -27,6 +27,11 @@ const navSpy = [
     icon: (<BsSuitcaseLg />),
     label: 'Experiência'
   },
+  {
+    sectionId: 'Contato',
+    icon: (<BsSuitcaseLg />),
+    label: 'Contato'
+  }
 ]
 
 const Header = ({children}) => {
@@ -83,7 +88,7 @@ const Header = ({children}) => {
                   {navSpy.map( ({sectionId, icon,label},i) => {
                     return <li key={i} onClick={() => scrollToSection(sectionId)}><Link className={ activeLink === sectionId ? 'active' : ''} to='/'>{width < 960 && icon}{label}</Link></li>
                   })}
-                { (width >= 960  || menuMobile ) && (<Button href={curriculo} icon={<BsFileEarmarkMedical />}>Baixar CV  </Button>)}
+                { (width >= 960  || menuMobile ) && (<Button href={curriculo} icon={<BsFileEarmarkMedical />}>Baixar CV</Button>)}
                 </ul>
               </nav>
             )}

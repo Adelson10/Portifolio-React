@@ -10,6 +10,10 @@
     padding: 0;
     margin: .5rem 0;
  }
+
+ .Apresentacao_Texto p {
+    margin: 1rem 0;
+ }
  
  .Apresentacao_Texto {
     font-weight: 200;

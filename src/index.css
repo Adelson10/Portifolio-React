@@ -63,6 +63,7 @@ section {
 
 p {
   color: var(--text);
+  margin: 0;
 }
 
 .container .Title {

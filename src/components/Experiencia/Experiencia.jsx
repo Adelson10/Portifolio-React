@@ -9,7 +9,23 @@ const experiencia = [
     tecnologias: ['React', 'Node','MongoDB','Express'],
     local: 'Colinas do Tocantins',
     tempo: '2022 - Presente'
-  }
+  },
+  {
+    empresa: 'Unitins',
+    ocupacao: 'Supervisor de TI',
+    resumo: 'Trabalhar como supervisor de TI envolve liderar e gerenciar equipes responsáveis pela infraestrutura de tecnologia da informação de uma organização. Essa função requer habilidades técnicas sólidas, conhecimento em sistemas, redes e segurança da informação.',
+    tecnologias: ['React', 'Node','MongoDB','Express'],
+    local: 'Colinas do Tocantins',
+    tempo: '2022 - Presente'
+  },
+  {
+    empresa: 'Unitins',
+    ocupacao: 'Supervisor de TI',
+    resumo: 'Trabalhar como supervisor de TI envolve liderar e gerenciar equipes responsáveis pela infraestrutura de tecnologia da informação de uma organização. Essa função requer habilidades técnicas sólidas, conhecimento em sistemas, redes e segurança da informação.',
+    tecnologias: ['React', 'Node','MongoDB','Express'],
+    local: 'Colinas do Tocantins',
+    tempo: '2022 - Presente'
+  },
 ]
 
 const Experiencia = () => {
@@ -21,7 +37,7 @@ const Experiencia = () => {
     </div>
     {experiencia.map(({empresa, ocupacao, resumo, tecnologias, local, tempo}) => {
       return (
-        <div key={empresa}>
+        <div className='Experiencia' key={empresa}>
           <div className='Experiencia__Dados'>
             <h4>{empresa}</h4>
             <p>{tempo}</p>
