@@ -1,6 +1,7 @@
 import { useWidthScreen } from '../../hooks/WidthScreen/useWidthScreen';
 import { Link } from 'react-router-dom';
 import { BsGithub,BsBoxArrowRight,BsX } from "react-icons/bs";
+import { MotionRevealDownModal } from '../Motion/MotionReveal';
 import './Modal.css';
 
 const Modal = () => {
@@ -19,8 +20,9 @@ const Modal = () => {
   }
   
   if (dateModal) return (
-    <div className='Modal__Background' onClick={handleCloseOut} >
+      <div className='Modal__Background' onClick={handleCloseOut} >
             <button className='close' onClick={handleClick}><BsX /></button>
+            <MotionRevealDownModal>
             <div className="Container_Modal">
                 <img src={dateModal.image} alt="" />
                 <div className="dateModal">
@@ -36,7 +38,8 @@ const Modal = () => {
                     </div>
                 </div>
             </div>
-    </div>
+            </MotionRevealDownModal>
+      </div>
   )
 }
 

@@ -128,12 +128,13 @@
     text-align: center;
   }
 
-  header a:hover, a:active {
+  header a:hover {
     color: var(--brand);
   }
 
   .active {
     color: var(--brand);
+    transition: color 200ms ease-in-out;
   }
 
 @media (min-width: 960px ) {

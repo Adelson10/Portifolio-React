@@ -3,6 +3,7 @@ import './Projetos.css';
 import City from '../../assets/projetos/example-city.png';
 import Example from '../../assets/projetos/example-project.jpg';
 import BoxProjetos from '../../utils/BoxProjetos/BoxProjetos';
+import {MotionReveal} from '../../utils/Motion/MotionReveal';
 
 const dateProjets = [{
   image: City,
@@ -57,7 +58,7 @@ const Projetos = () => {
   return (
     <section id="Projetos">
         <div className='Title'>
-          <h1>Projetos<span>.</span></h1>
+          <MotionReveal><h1>Projetos<span>.</span></h1></MotionReveal>
           <div className='line'></div>
         </div>
         <div className='Projetos'>

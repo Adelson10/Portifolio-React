@@ -5,6 +5,8 @@ import { useWidthScreen } from '../../hooks/WidthScreen/useWidthScreen';
 import { Link } from 'react-router-dom';
 import Button from '../../utils/Button/Button';
 import curriculo from '../../assets/curriculo/Curriculo Adelson.pdf';
+import { MotionDown } from '../../utils/Motion/MotionDown';
+import { MotionReveal } from '../../utils/Motion/MotionReveal';
 
 const navSpy = [
   {
@@ -56,7 +58,7 @@ const Header = ({children}) => {
       
       if(section) {        
         const rect = section.getBoundingClientRect();        
-        if( rect.top <= 120 && rect.bottom >= 120 ) {          
+        if( rect.top <= 350 && rect.bottom >= 120) { 
           setActiveLink(navSpy[i].sectionId);
           break;
         }
@@ -80,15 +82,39 @@ const Header = ({children}) => {
     <>
     <header className={`${menuMobile ? 'ActiveMenuMobile' : ''} ${ InitialMenuMobile && !menuMobile ? 'DisabledHeader ' : ''}`}>
       <div className={`Header__Box ${menuMobile ? 'ActiveMenu' : ''}`}>
-          { !menuMobile && (<h1>Adelson<span>.</span></h1>)}
+          { !menuMobile && (<MotionReveal><h1>Adelson<span>.</span></h1></MotionReveal>)}
           { (width >= 960 || menuMobile) &&
             (
               <nav>
                 <ul>
-                  {navSpy.map( ({sectionId, icon,label},i) => {
-                    return <li key={i} onClick={() => scrollToSection(sectionId)}><Link className={ activeLink === sectionId ? 'active' : ''} to='/'>{width < 960 && icon}{label}</Link></li>
-                  })}
-                {(width > 960  && !menuMobile ) ? (<Button href={curriculo} icon={<BsFileEarmarkMedical />}>Baixar CV</Button>) : (<Button Iconizado={'Iconizado'} href={curriculo} icon={<BsFileEarmarkMedical />}></Button>)}
+                { (width > 960) ? navSpy.map( ({sectionId, icon,label},i) => {
+                    return (
+                      <MotionDown index={i}>
+                        <li key={i} onClick={() => scrollToSection(sectionId)}>
+                          <Link className={ activeLink === sectionId ? 'active' : ''} to='/'>
+                            {width < 960 && icon}{label}
+                          </Link>
+                        </li>
+                      </MotionDown>
+                    )
+                  }) : 
+                  navSpy.map( ({sectionId, icon,label},i) => {
+                    return (
+                        <li key={i} onClick={() => scrollToSection(sectionId)}>
+                          <Link className={ activeLink === sectionId ? 'active' : ''} to='/'>
+                            {width < 960 && icon}{label}
+                          </Link>
+                        </li>
+                    )
+                  })
+                  }
+                {(width > 960  && !menuMobile ) ? 
+                  (<MotionDown index={5}>
+                    <Button href={curriculo}>Baixar CV</Button>
+                  </MotionDown>)
+                  :
+                  (<Button Iconizado={'Iconizado'} href={curriculo} icon={<BsFileEarmarkMedical />}></Button>)
+                }
                 </ul>
               </nav>
             )}

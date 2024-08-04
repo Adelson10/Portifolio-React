@@ -1,5 +1,6 @@
 import React from 'react';
 import './Experiencia.css'
+import {MotionReveal} from '../../utils/Motion/MotionReveal';
 
 const experiencia = [
   {
@@ -32,24 +33,26 @@ const Experiencia = () => {
   return (
   <section id="Experiencia">
     <div className='Title'>
-      <h1>Experiência<span>.</span></h1>
+      <MotionReveal><h1>Experiência<span>.</span></h1></MotionReveal>
       <div className='line'></div>
     </div>
     {experiencia.map(({empresa, ocupacao, resumo, tecnologias, local, tempo}) => {
       return (
         <div className='Experiencia' key={empresa}>
           <div className='Experiencia__Dados'>
-            <h4>{empresa}</h4>
-            <p>{tempo}</p>
+            <MotionReveal><h4>{empresa}</h4></MotionReveal>
+            <MotionReveal><p>{tempo}</p></MotionReveal>
           </div>
           <div className='Experiencia__Dados'>
-            <span className='Experiencia_Ocupacao'>{ocupacao}</span>
-            <p>{local}</p>
+            <MotionReveal><span className='Experiencia_Ocupacao'>{ocupacao}</span></MotionReveal>
+            <MotionReveal><p>{local}</p></MotionReveal>
           </div>
-          <p>{resumo}</p>
-          <ul className='Habilidades_grid'>
-            {tecnologias.map((tecnologia,i) => (<li className='chip' key={tecnologia}>{tecnologia}</li>))}
-          </ul>
+          <MotionReveal><p>{resumo}</p></MotionReveal>
+          <MotionReveal>
+            <ul className='Habilidades_grid'>
+              {tecnologias.map((tecnologia,i) => (<li className='chip' key={tecnologia}>{tecnologia}</li>))}
+            </ul>
+          </MotionReveal>
         </div>
       )
     })}

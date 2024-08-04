@@ -1,4 +1,3 @@
-import './App.css'
 import Header from './components/Header/Header';
 import Apresentacao from './components/Apresentacao/Apresentacao';
 import { WidthScreenContext } from './hooks/WidthScreen/useWidthScreen';
@@ -8,6 +7,7 @@ import Projetos from './components/Projetos/Projetos';
 import Modal from './utils/Modal/Modal';
 import Experiencia from './components/Experiencia/Experiencia';
 import Contato from './components/Contato/Contato';
+import Footer from './components/Footer/Footer.jsx';
 
 function App() {
 
@@ -22,6 +22,7 @@ function App() {
                   <Projetos />
                   <Experiencia />
                   <Contato />
+                  <Footer />
               </Header>
             </div>
             <Modal />

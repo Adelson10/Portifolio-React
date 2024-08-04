@@ -1,7 +1,58 @@
 #Contato {
-
+    height: 100% !important;
 }
 
-#Contato h1{
+#Contato .Container h1{
     font-size: var(--text-sm);
+    font-weight: 900;
+    margin: 0;
+}
+
+#Contato .Container {
+    max-width: 700px;
+    text-align: center;
+    padding: 2rem 0;
+    margin: 0 auto;
+}
+
+#Contato .backgroundFooter {
+    width: 100%;
+    height: 200px;
+}
+
+#Contato .Container p {
+    margin: 1rem 0;
+    font-weight: 200;
+    font-size: 1.1rem;
+}
+
+#Contato .Container strong > a{
+    font-weight: 200;
+    font-size: 1.1rem;
+    display: inline-block;
+}
+
+#Contato .Container strong > a:hover {
+    text-decoration: underline;
+}
+
+#Contato .Container a{
+    margin-top: 1rem;
+    color: var(--brand);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1rem;
+}
+
+@media (min-width: 960px) {
+    #Contato .Container h1 {
+        font-size: var(--text-xl);
+    }
+
+    #Contato .Container a{
+        font-size: 1.4rem;
+    }
 }
