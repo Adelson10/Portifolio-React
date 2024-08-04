@@ -39,12 +39,23 @@
       border: none;
       background: none;
       z-index: 10;
-      height: 1rem;
-      width: 2rem;
+      height: 2rem;
+      width: fit-content;
       color: var(--text);
+
+  }
+
+  .Botao__Menu h1 {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: .5rem;
   }
   
-  .Botao__Menu:hover, .Botao__Menu:active {
+  .Botao__Menu:hover,
+  .Botao__Menu:active,
+  .Botao__Menu h1:hover,
+  .Botao__Menu h1:active {
     color: var(--brand);
   }
 

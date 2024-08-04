@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { BsHouseDoor,BsPerson,BsFileEarmarkMedical,BsSuitcaseLg,BsUiChecksGrid,BsXLg } from "react-icons/bs";
+import { BsHouseDoor,BsPerson,BsFileEarmarkMedical,BsSuitcaseLg,BsUiChecksGrid,BsXLg,BsEnvelope,BsTerminal } from "react-icons/bs";
 import './Header.css';
 import { useWidthScreen } from '../../hooks/WidthScreen/useWidthScreen';
 import { Link } from 'react-router-dom';
@@ -11,27 +11,27 @@ import { MotionReveal } from '../../utils/Motion/MotionReveal';
 const navSpy = [
   {
     sectionId: 'Inicio',
-    icon: (<BsHouseDoor />),
+    icon: (<BsHouseDoor size='1.1rem'/>),
     label: 'Inicio'
   },
   {
     sectionId: 'SobreMim',
-    icon: (<BsPerson />),
+    icon: (<BsPerson size='1.1rem'/>),
     label: 'Sobre Mim'
   },
   {
     sectionId: 'Projetos',
-    icon: (<BsSuitcaseLg />),
+    icon: (<BsTerminal size='1.1rem'/>),
     label: 'Projetos'
   },
   {
     sectionId: 'Experiencia',
-    icon: (<BsSuitcaseLg />),
+    icon: (<BsSuitcaseLg size='1.1rem'/>),
     label: 'Experiência'
   },
   {
     sectionId: 'Contato',
-    icon: (<BsSuitcaseLg />),
+    icon: (<BsEnvelope size='1.1rem'/>),
     label: 'Contato'
   }
 ]
@@ -118,7 +118,7 @@ const Header = ({children}) => {
                 </ul>
               </nav>
             )}
-          { (width < 960) && (<button onClick={handleMenu} className='Botao__Menu'>{ !menuMobile ? <BsUiChecksGrid size='1.2rem'/> : <BsXLg size='1.2rem'/> }</button>)}
+          { (width < 960) && (<button onClick={handleMenu} className='Botao__Menu'>{ !menuMobile ? (<h1>{activeLink}<BsUiChecksGrid size='1.2rem'/></h1>) : <BsXLg size='1.2rem'/> }</button>)}
         </div>
     </header>
     {children}
