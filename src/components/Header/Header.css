@@ -8,7 +8,7 @@
       -webkit-backdrop-filter: blur(12px);
       backdrop-filter: blur(12px);
       position: fixed;
-      padding: 1rem;
+      padding: .8rem 1rem;
       box-shadow: 0 0 8px #0000;
       transition: box-shadow .5s ease-in-out;
       z-index: 999;
@@ -50,12 +50,17 @@
     align-items: center;
     justify-content: end;
     gap: .5rem;
+    color: var(--brand);
+  }
+
+  .Botao__Menu h1 svg {
+    color: var(--text);
   }
   
   .Botao__Menu:hover,
   .Botao__Menu:active,
-  .Botao__Menu h1:hover,
-  .Botao__Menu h1:active {
+  .Botao__Menu svg:hover,
+  .Botao__Menu svg:active {
     color: var(--brand);
   }
 
@@ -81,7 +86,7 @@
   .ActiveMenu {
     flex-direction: column-reverse;
     align-items: end;
-    gap: 1rem;
+    gap: .2rem;
   }
 
   @keyframes onMobileAnimation {
@@ -119,7 +124,7 @@
     margin: auto;
   }
 
-  header li > a {
+  header li  a {
     display: flex;
     flex-direction: column;
     gap: .5rem;
@@ -187,7 +192,7 @@
         flex-direction: row;
   }
 
-  header li > a {
+  header li a {
     font-size: 1.1rem;
   }
 

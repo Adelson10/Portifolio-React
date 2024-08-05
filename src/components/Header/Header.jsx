@@ -8,6 +8,7 @@ import curriculo from '../../assets/curriculo/Curriculo Adelson.pdf';
 import { MotionDown } from '../../utils/Motion/MotionDown';
 import { MotionReveal } from '../../utils/Motion/MotionReveal';
 
+// Variaveis que guarda os dados do nav
 const navSpy = [
   {
     sectionId: 'Inicio',
@@ -37,28 +38,45 @@ const navSpy = [
 ]
 
 const Header = ({children}) => {
+  // variavel de Ativação do Menu na versão Mobile
   const [menuMobile, setMenuMobile] = useState(false);
+  // Variavel de reset para cancelar a animação inicial do Menu no Mobile
   const [InitialMenuMobile, setInitialMenuMobile] = useState(false);
+  // Variavel de Ativação no elemento atual da pagina
   const [activeLink, setActiveLink] = useState('Inicio');
+  // Comprimento da tela do Browser
   const { width } = useWidthScreen();
-
+  
+  // Função de Scroll para mover a pagina para o elemento ancorado
   function scrollToSection(sectionId){
+    // Puxa o elemento atual da pagina que foi selecionada
     const element = document.getElementById(sectionId);
-    
+
+    // Verifica se o elemento existe
     if(element) {
+      // Marca a margin do Top como 0
       const marginTop = 0;
-      const scrollToY = element.getBoundingClientRect().top + window.scrollY - marginTop;       
+      //  Fornece informações sobre sua posição em relação à janela de visualização + Retorna o número de pixels que o documento já rolou verticalmente - a Margin top selecionada.
+      const scrollToY = element.getBoundingClientRect().top + window.scrollY - marginTop;
+      // Move para a posição do elemento e suavisa o deslize com behavior    
       window.scrollTo({top: scrollToY, behavior: "smooth"});
     }
   }
 
+  // Função de determinar o selection ativo
   function determineActiveSection() {
+    // Loop de tras pra frente 4,3,2,1
     for(let i = navSpy.length - 1; i>=0; i--) {
+      // Seleciona o array de ids de list do nav
       const section = document.getElementById(navSpy[i].sectionId);
       
-      if(section) {        
-        const rect = section.getBoundingClientRect();        
+      // Se o valor existir
+      if(section) {
+        // fornece informações sobre o tamanho de um elemento e seu posição em relação à janela de visualização.
+        const rect = section.getBoundingClientRect();
+        // Se o valor da distancia da janela visualizada for menor que 350 e maior que 120 
         if( rect.top <= 350 && rect.bottom >= 120) { 
+          // ao encontrar o valor que esta dentro dos parametros ele salva o valor
           setActiveLink(navSpy[i].sectionId);
           break;
         }
@@ -66,14 +84,17 @@ const Header = ({children}) => {
     }
   }
 
+  // Função que ao clicar no botão ativa e desativa o Menu Mobile
   function handleMenu(){
     setMenuMobile(() => !menuMobile);
     setInitialMenuMobile(true);
   }
 
   useEffect(() => {
+    // Adiciona o evento que determina qual section está ativa
     window.addEventListener("scroll", determineActiveSection);
     return () => {
+      // Remove o evento do js
       window.removeEventListener("scroll", determineActiveSection);
     }
   },[])
@@ -89,13 +110,13 @@ const Header = ({children}) => {
                 <ul>
                 { (width > 960) ? navSpy.map( ({sectionId, icon,label},i) => {
                     return (
-                      <MotionDown index={i}>
                         <li key={i} onClick={() => scrollToSection(sectionId)}>
+                          <MotionDown index={i}>
                           <Link className={ activeLink === sectionId ? 'active' : ''} to='/'>
                             {width < 960 && icon}{label}
                           </Link>
+                          </MotionDown>
                         </li>
-                      </MotionDown>
                     )
                   }) : 
                   navSpy.map( ({sectionId, icon,label},i) => {

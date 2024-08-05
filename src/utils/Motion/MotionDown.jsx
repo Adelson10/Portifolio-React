@@ -3,7 +3,7 @@ import React from 'react';
 
 export const MotionDown = ({children,index}) => {
   return (
-    <motion.li
+    <motion.div
     variants={{
         hidden: {opacity: 0, y: -30 },
         visible: {opacity: 1, y: 0 },
@@ -11,7 +11,7 @@ export const MotionDown = ({children,index}) => {
       initial="hidden"
       animate="visible"
       transition={{ duration: 0.5 ,delay: (index+1)*0.1 }}
-    >{children}</motion.li>
+    >{children}</motion.div>
   )
 }
 
