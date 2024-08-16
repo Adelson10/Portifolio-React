@@ -4,7 +4,7 @@ import './Header.css';
 import { useWidthScreen } from '../../hooks/WidthScreen/useWidthScreen';
 import { Link } from 'react-router-dom';
 import Button from '../../utils/Button/Button';
-import curriculo from '../../assets/curriculo/Curriculo Adelson.pdf';
+import curriculo from '../../assets/curriculo/Curriculo_Adelson.pdf';
 import { MotionDown } from '../../utils/Motion/MotionDown';
 import { MotionReveal } from '../../utils/Motion/MotionReveal';
 
