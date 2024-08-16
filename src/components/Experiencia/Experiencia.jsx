@@ -4,28 +4,12 @@ import {MotionReveal} from '../../utils/Motion/MotionReveal';
 
 const experiencia = [
   {
-    empresa: 'Unitins',
-    ocupacao: 'Supervisor de TI',
-    resumo: 'Trabalhar como supervisor de TI envolve liderar e gerenciar equipes responsáveis pela infraestrutura de tecnologia da informação de uma organização. Essa função requer habilidades técnicas sólidas, conhecimento em sistemas, redes e segurança da informação.',
-    tecnologias: ['React', 'Node','MongoDB','Express'],
-    local: 'Colinas do Tocantins',
-    tempo: '2022 - Presente'
-  },
-  {
-    empresa: 'Unitins',
-    ocupacao: 'Supervisor de TI',
-    resumo: 'Trabalhar como supervisor de TI envolve liderar e gerenciar equipes responsáveis pela infraestrutura de tecnologia da informação de uma organização. Essa função requer habilidades técnicas sólidas, conhecimento em sistemas, redes e segurança da informação.',
-    tecnologias: ['React', 'Node','MongoDB','Express'],
-    local: 'Colinas do Tocantins',
-    tempo: '2022 - Presente'
-  },
-  {
-    empresa: 'Unitins',
-    ocupacao: 'Supervisor de TI',
-    resumo: 'Trabalhar como supervisor de TI envolve liderar e gerenciar equipes responsáveis pela infraestrutura de tecnologia da informação de uma organização. Essa função requer habilidades técnicas sólidas, conhecimento em sistemas, redes e segurança da informação.',
-    tecnologias: ['React', 'Node','MongoDB','Express'],
-    local: 'Colinas do Tocantins',
-    tempo: '2022 - Presente'
+    empresa: 'freelancer',
+    ocupacao: 'Desginer Web',
+    resumo: 'Trabalhei como desenvolvedor web, criando sites utilizando Shopify e Panda, plataformas similares ao WordPress. Durante esse período, utilizei minha experiência em JavaScript, HTML e CSS para implementar melhorias significativas nos projetos. Meu foco estava em personalizar e otimizar a experiência do usuário, garantindo que os sites fossem funcionais, visualmente atraentes e perfeitamente alinhados com as necessidades dos clientes.',
+    tecnologias: ['HTML', 'CSS','JavaScript','Shopify'],
+    local: 'Remoto',
+    tempo: 'jan de 2022 - jul de 2022'
   },
 ]
 
