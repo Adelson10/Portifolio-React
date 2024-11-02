@@ -13,7 +13,7 @@ export const MotionReveal = ({children, width = 'fit-content'}) => {
             mainControls.start("visible");
             slideControls.start("visible");
         }
-    },[isInView])
+    },[isInView]);
 
   return (
     <div ref={ref} style={{ position: 'relative', width , overflow: 'hidden' }}>
