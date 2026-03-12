@@ -3,8 +3,8 @@ import { BsWindowSidebar,BsFillTerminalFill } from "react-icons/bs";
 import './SobreMim.css';
 import {MotionReveal} from '../../utils/Motion/MotionReveal';
 
-const frontEnd = ['React','TypeScript','HTML','CSS','REDUX','TailwindCss','Figma'];
-const backEnd = ['NodeJs','Express','Postgres','MongoDB','GitHub','Knex'];
+const frontEnd = ['React','TypeScript','HTML','CSS','NEXT','REDUX','TailwindCss','Figma'];
+const backEnd = ['NodeJs','Postgres','GitHub', 'MongoDB','Java','Spring Boot'];
 
 const SobreMim = () => {
   return (
