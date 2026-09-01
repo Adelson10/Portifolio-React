@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://colegioeinsteincolinas.com.br/sitemap.xml

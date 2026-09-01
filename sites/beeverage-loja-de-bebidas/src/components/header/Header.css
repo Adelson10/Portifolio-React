@@ -1,0 +1,105 @@
+header {
+    padding-top: 1rem;
+}
+
+.Header {
+    display: flex;
+    flex-wrap: wrap;
+    padding: .5rem 0;
+}
+
+.Header_Container {
+    order: 1;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.Header_MenuMobile {
+    display: flex;
+    height: 30px;
+    width: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.MenuMobile_Icon,
+.MenuMobile_Icon::after,
+.MenuMobile_Icon::before {
+    width: 23px;
+    height: 2px;
+    border-radius: 10px;
+    background: var(--color-primary);
+    transition: transform 500ms;
+}
+
+.MenuMobile_Icon::after,
+.MenuMobile_Icon::before {
+    content: '';
+    display: block;
+}
+
+.MenuMobile_Icon::after {
+    transform: translateY(5px);
+}
+
+.MenuMobile_Icon::before {
+    transform: translateY(-7px);
+}
+
+.Active .MenuMobile_Icon::after {
+    transform: translateY(-2px) rotate(45deg);
+    background: var(--brand);
+}
+
+.Active .MenuMobile_Icon::before {
+    transform: translateY(0px) rotate(-45deg);
+    background: var(--brand);
+}
+
+.Active .MenuMobile_Icon {
+    background: none;
+}
+
+nav {
+    order: 1;
+    width: 50%;
+}
+
+@media (min-width: 1000px) {
+    header {
+        margin-bottom: 1rem;
+    }
+    
+    .Header {
+        justify-content: space-between;
+        align-items: center;
+        padding: .5rem 0;
+        flex-wrap: nowrap;
+    }
+    
+    .Logo {
+        background-image: url("../../assets/Logo/Logo.png");
+        background-size: cover;
+        background-position: center;
+        height: 5.8rem;
+        width: 5.8rem;
+    }
+    
+    .Header nav {
+        display: flex;
+        gap: 2rem;
+        width: initial;
+        order: 3;
+    }
+    
+    button.icons {
+        color: var(--brand-dark);
+        padding: 0;
+    }
+    
+    button.icons:hover {
+        color: var(--brand-select);
+    }
+}

@@ -1,0 +1,146 @@
+.contact-us-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background: #002429;
+    max-width: 90%;
+    box-sizing: content-box;
+    border-radius: 2rem;
+    font-family: var(--font-three);
+    overflow: hidden;
+    outline: none;
+    margin: 4rem auto;
+}
+
+.contact-us-text {
+    background-image: linear-gradient(to left, #002429, #00242900),
+    url('../../assets/bg/image-footer.webp');
+    background-size: cover;
+    height: 370px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-us-text h1{
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--color-three);
+    margin: 0;
+    display: inline-block;
+}
+
+.contact-us-text p {
+    color: #BBBBBB;
+    margin: 0;
+    display: inline-block;
+    text-align: center;
+}
+
+.contact-us-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0 1rem;
+    margin: 0 auto;
+    min-width: 80%;
+}
+
+.contact-us-mensagem {
+    width: 100%;
+}
+
+.contact-us-mensagem textarea {
+    width: 100%;
+    border: none;
+    border-radius: 1rem;
+    overflow: hidden;
+    outline: none;
+    padding: 1rem;
+    background: var(--color-one);
+    box-sizing: border-box;
+    font-size: 1rem;
+    resize: none;
+    color: black;
+    font-family: var(--font-one);
+}
+
+.contact-us-name {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    width: 100%;
+}
+
+.contact-us-name .contect-us-label {
+    display: inline-block;
+    padding: 1rem;
+    font-size: 1rem;
+    font-family: var(--font-one);
+    background: var(--color-one);
+    border-radius: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-us-name .contect-us-label > input {
+    border: none;
+    background: none;
+    color: black;
+    font-size: 1rem;
+    outline: none;
+    font-family: var(--font-one);
+    width: 100%;
+}
+
+.contact-us-name .contect-us-label > input::placeholder,
+.contact-us-mensagem textarea::placeholder {
+    font-family: var(--font-one);
+    font-weight: bold;
+    color: #BDBDBD;
+}
+
+.contact-us-form button {
+    padding: 1.1rem;
+    width: 100%;
+    border-radius: 4rem;
+    border: none;
+    font-family: var(--font-one);
+    font-weight: 700;
+    background: var(--color-three);
+    font-size: 1rem;
+    color: black;
+    cursor: pointer;
+}
+
+.contact-us-form button:hover {
+    background: var(--color-three-dark);
+}
+
+
+.contact-us-form button:hover {
+    color: var(--color-one);
+}
+
+@media (max-width: 1000px) {
+    .contact-us-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-us-text {
+        background-image: linear-gradient(to top, #002429, #00242900),
+        url(/src/assets/bg/image-footer.webp);
+        background-position: center center;
+        outline: none;
+        height: 100%;
+        padding: 2rem 1rem;
+        border: none;
+    }
+
+    .contact-us-form {
+        padding: 3rem 1rem;
+    }
+}

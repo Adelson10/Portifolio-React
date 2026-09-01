@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerador de Frete</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;600;700&family=Montserrat:ital,wght@0,400;0,600;0,700;1,700&family=Rubik:wght@400;700&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="form">
+      <div class="header">
+        <h1>Gerador de Anúncio de Frete</h1>
+      </div>
+
+      <div class="body">
+        <form id="freteForm">
+          <!-- Origem -->
+          <div class="input-group">
+            <input type="text" id="origem" placeholder="Origem" required>
+          </div>
+
+          <!-- Observação Origem -->
+          <div class="input-group">
+            <input type="text" id="obsOrigem" placeholder="Observação origem (opcional)">
+          </div>
+
+          <!-- Destino -->
+          <div class="input-group">
+            <input type="text" id="destino" placeholder="Destino" required>
+          </div>
+
+          <!-- Observação Destino -->
+          <div class="input-group">
+            <input type="text" id="obsDestino" placeholder="Observação destino (opcional)">
+          </div>
+
+          <!-- Valor -->
+          <div class="input-group">
+            <input type="text" id="valor" placeholder="Valor (ex: R$ 2.500,00)" required>
+          </div>
+
+          <!-- Observações Gerais -->
+          <div class="input-group">
+            <input type="text" id="obs" placeholder="Observações gerais (opcional)">
+          </div>
+
+          <!-- Contatos -->
+          <div class="contacts-group">
+            <div id="contactsList"></div>
+            <button type="button" id="addContactBtn" class="btn-add-contact">
+              <i class="fas fa-plus"></i> Adicionar contato
+            </button>
+          </div>
+
+        </form>
+
+        <!-- Seletor de Template -->
+        <div class="template-selector">
+          <div class="template-previews" id="templatePreviews"></div>
+        </div>
+
+        <button id="downloadBtn">Baixar imagem</button>
+      </div>
+    </div>
+
+    <div class="canvas-container">
+      <canvas id="canvas" width="1080" height="1920"></canvas>
+    </div>
+  </div>
+
+  <script src="./templates/templateManager.js"></script>
+  <script src="./utils/imageLoader.js"></script>
+  <script src="./utils/canvasRenderer.js"></script>
+  <script src="./core/app.js"></script>
+</body>
+</html>

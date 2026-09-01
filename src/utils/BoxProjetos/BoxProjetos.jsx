@@ -1,7 +1,7 @@
 import React from 'react';
 import './BoxProjetos.css';
 import { Link } from 'react-router-dom';
-import { BsGithub,BsBoxArrowRight } from "react-icons/bs";
+import { BsBoxArrowRight } from "react-icons/bs";
 import { useWidthScreen } from '../../hooks/WidthScreen/useWidthScreen';
 import { MotionReveal, MotionRevealDown } from '../Motion/MotionReveal';
 
@@ -26,7 +26,6 @@ const BoxProjetos = (props) => {
                   <h2>{props.title}</h2>
                   <div className="line"></div>
                   <div className="botoes">
-                      <Link to={props.GitHub} target='_blank' rel='nofollow'><BsGithub /></Link>
                       <Link to={props.Href} target='_blank' rel='nofollow'><BsBoxArrowRight /></Link>
                   </div>
               </div>

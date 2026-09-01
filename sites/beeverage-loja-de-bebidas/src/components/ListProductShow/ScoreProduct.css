@@ -1,0 +1,24 @@
+.score-start {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .1rem;
+    color: var(--brand-dark);
+    font-weight: 600;
+    font-size: .9rem;
+}
+
+.score-start-icon {
+    display: flex;
+    align-items: center;
+    gap: .1rem;
+}
+
+.score-start-icon span {
+    display: flex;
+    align-items: center;
+}
+
+.score-start-icon.reverse {
+    transform: scaleX(-1);
+}

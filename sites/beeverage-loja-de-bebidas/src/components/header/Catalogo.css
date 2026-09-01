@@ -1,0 +1,143 @@
+ul {
+    list-style: none;
+    display: flex;
+    overflow-x: scroll;
+    gap: .5rem;
+} 
+
+ul::-webkit-scrollbar {
+    display: none;
+}
+
+.catalogo_button {
+    width: calc((100vw*0.90)/3 - 1rem);
+    max-width: 120px;
+    padding: 12px 8px;
+    border-radius: .5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
+    font-size: .8rem;
+    color: var(--brand-dark);
+    background: white;
+    gap: .5rem;
+}
+
+.catalogo_button svg {
+    min-width: 1.2rem;
+}
+
+.catalogo_button.active {
+    color: white;
+    background: linear-gradient(-68deg, var(--brand-dark) 0%,var(--brand) 100%);
+}
+
+a {
+    text-decoration: none;
+}
+
+.ModalCatalogo_Container {
+    position: absolute;
+    padding: 1rem;
+    background: white;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+    
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+    border-radius: .5rem;
+
+    animation: ModalCatalogo 300ms forwards;
+    z-index: 15;
+}
+
+@keyframes ModalCatalogo {
+    0% {
+        transform: translateY(0px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(10px);
+        opacity: 1;
+    }
+}
+
+.ModalCatalogo_Container h3 {
+    font-weight: 600;
+    color: var(--brand-dark);
+    margin-bottom: .3rem;
+}
+
+.ModalCatalogo_List {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    row-gap: .5rem;
+}
+
+.ModalCatalogo_List a {
+    color: var(--color-primary);
+}
+
+.ModalCatalogo_Container a:hover,
+.ModalCatalogo_Container a:active {
+    text-decoration: underline;
+    color: var(--brand);
+}
+
+.noCategories,
+.noCategories::after,
+.noCategories::before {
+    width: 18px;
+    height: 2px;
+    background: var(--brand-dark);
+    transition: transform 300ms;
+}
+
+.noCategories::after,
+.noCategories::before {
+    content: '';
+    display: block;
+}
+
+.noCategories::after {
+    transform: translateY(4px);
+}
+
+.noCategories::before {
+    transform: translateY(-6px);
+}
+
+.noCategories.active {
+    background: none;
+    transform: translate(-4px, 1px);
+}
+
+.noCategories.active::after,
+.noCategories.active::before {
+    background: white;
+}
+
+.noCategories.active::after{
+    transform: rotateZ(45deg) translate(-2px, 0px) scaleX(0.7);
+}
+
+.noCategories.active::before{
+    transform: rotateZ(-45deg) translate(5px, 5px) scaleX(0.71);
+}
+
+@media (min-width: 1000px) {
+    ul {
+        justify-content: space-between;
+        overflow-x: hidden;
+        gap: 0;
+    }
+
+    .catalogo_button {
+        max-width: 120px;
+        padding: 8px;
+        gap: .3rem;
+        font-size: .9rem;
+    }
+}

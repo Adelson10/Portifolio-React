@@ -1,0 +1,47 @@
+.Modal {
+    animation: Modal 500ms forwards;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    background: var(--bg);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.233);
+    border-radius: 5px;
+    padding: .3rem 0;
+}
+
+@keyframes Modal {
+    0% {
+        opacity: 0;
+        transform: translateY(80px);
+    } 
+    100% {
+        opacity: 1;
+        transform: translateY(90px);
+    }
+}
+
+.Modal .icons {
+    color: var(--color-primary);
+    display: flex;
+    padding: .5rem 1rem;
+
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.Modal .icons:hover {
+    color: var(--brand-dark);
+}
+
+@media (min-width: 1000px) {
+    .Modal .icons {
+        color: var(--brand-dark);
+        padding: 0;
+    }
+    
+    .Modal .icons:hover {
+        color: var(--brand-select);
+    }
+}

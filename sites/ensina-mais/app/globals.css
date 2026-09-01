@@ -1,0 +1,235 @@
+@import "tailwindcss";
+
+/* Habilita dark: via classe .dark no html (além da preferência do sistema) */
+@variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #ffffff;
+  --foreground: #323232;
+  --brand: #43A2D2;
+  --brand-secundary: #00517B;
+  --secundary: #E6E6E6;
+  --color-success: #22c55e;
+  --color-danger: #ef4444;
+  --color-warning: #f59e0b;
+  --bg-a4: oklch(92.2% 0 0);
+  --scroll: #1818182f;
+  --logo-ink: #1A2B3B;
+  --background-secundary: #f6f6f6;
+}
+
+/* Dark mode via preferência do sistema (tema "Sistema", sem classe em <html>) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --brand: #5BB8E8;
+    --brand-secundary: #43A2D2;
+    --secundary: #2a2a2a;
+    --bg-a4: oklch(26.9% 0 0);
+    --scroll: #ffffff2f;
+    --logo-ink: #ffffff;
+    --background-secundary: #050505;
+  }
+}
+
+/* Tema forçado pelo usuário (Configurações > Geral, ver lib/theme.ts)  `:root.dark`/`:root.light`
+   têm mais especificidade que o `:root` sozinho acima, então sempre vencem a preferência do
+   sistema quando a classe está presente em <html>. */
+:root.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --brand: #5BB8E8;
+  --brand-secundary: #43A2D2;
+  --secundary: #2a2a2a;
+  --bg-a4: oklch(26.9% 0 0);
+  --scroll: #ffffff2f;
+  --logo-ink: #ffffff;
+  --background-secundary: #050505;
+}
+
+:root.light {
+  --background: #ffffff;
+  --foreground: #323232;
+  --brand: #43A2D2;
+  --brand-secundary: #00517B;
+  --secundary: #E6E6E6;
+  --bg-a4: oklch(92.2% 0 0);
+  --scroll: #1818182f;
+  --logo-ink: #1A2B3B;
+  --background-secundary: #f6f6f6;
+}
+
+/* Scrollbar customizada  restrita à página /inicio (ver .inicio-scroll no
+   app/inicio/page.tsx) de propósito, pra não trocar a scrollbar nativa do
+   resto do produto (app logado). */
+:root {
+  --sb-size: 8px;
+  --sb-track: transparent;
+  --sb-thumb: var(--scroll);
+}
+
+.inicio-scroll::-webkit-scrollbar,
+.inicio-scroll *::-webkit-scrollbar {
+  width: var(--sb-size);
+  height: var(--sb-size);
+  z-index: 100;
+}
+
+.inicio-scroll::-webkit-scrollbar-track,
+.inicio-scroll *::-webkit-scrollbar-track {
+  background: var(--sb-track);
+  z-index: 100;
+}
+
+.inicio-scroll::-webkit-scrollbar-thumb,
+.inicio-scroll *::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb);
+  border-radius: 4px;
+  z-index: 100;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  .inicio-scroll,
+  .inicio-scroll * {
+    scrollbar-color: var(--sb-thumb) var(--sb-track);
+    scrollbar-width: thin;
+  }
+}
+
+/* Campo de gradiente do glow do hero (ver hero-glow-background.tsx)  cobre 100% da
+   área, por trás da grade de triângulos, pra ter algo vazando pelas frestas em toda a
+   extensão do hero (sem isso, só as bolhas de canto tinham cor por trás pra vazar). */
+.hero-glow-field {
+  background-image:
+    radial-gradient(circle at 15% 20%, var(--brand-secundary), transparent 55%),
+    radial-gradient(circle at 85% 30%, var(--brand), transparent 50%),
+    radial-gradient(circle at 30% 85%, var(--brand), transparent 50%),
+    radial-gradient(circle at 90% 90%, var(--brand-secundary), transparent 55%);
+  background-size: 180% 180%;
+  background-position: 0% 0%;
+  animation: hero-glow-field-drift 26s ease-in-out infinite alternate;
+}
+
+@keyframes hero-glow-field-drift {
+  from { background-position: 0% 0%; }
+  to { background-position: 100% 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-glow-field {
+    animation: none;
+  }
+}
+
+/* Grade de triângulos do glow do hero (ver hero-glow-background.tsx). Cada .triangle-set
+   desenha dois triângulos (::before/::after) preenchidos com --background  a mesma cor
+   de fundo da seção  deixando só uma fresta de --gap por onde o glow atrás vaza. --gap
+   controla a espessura das linhas e a opacity controla o quão sutil a grade fica. */
+.triangle-grid {
+  --gap: 1px;
+  --triangle-base: 18px;
+  --triangle-base-height: calc(1.733 * var(--triangle-base));
+  --triangle-width: calc(var(--triangle-base) - var(--gap));
+  --triangle-height: calc(var(--triangle-base-height) - var(--gap));
+  display: grid;
+  grid-template-columns: repeat(var(--columns), calc(var(--triangle-base) * 2 + var(--gap)));
+  opacity: 0.5;
+}
+
+.triangle-set {
+  display: inline-block;
+  position: relative;
+  width: calc(var(--triangle-base) * 2 + var(--gap));
+  height: var(--triangle-base-height);
+}
+
+.triangle-set--offset {
+  transform: translateX(calc(-1 * var(--triangle-base) - 0.5 * var(--gap)));
+}
+
+.triangle-set::before,
+.triangle-set::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: var(--gap);
+  border-right: var(--triangle-width) solid transparent;
+  border-left: var(--triangle-width) solid transparent;
+}
+
+.triangle-set::before {
+  left: calc(-1 * var(--triangle-base));
+  border-bottom: var(--triangle-height) solid var(--background);
+}
+
+.triangle-set::after {
+  right: calc(var(--gap) * 2.5);
+  border-top: var(--triangle-height) solid var(--background);
+}
+
+/* Seta nativa do <select> não é reposicionável sem appearance:none  desenhamos uma
+   própria pra poder deslocá-la (background-position) igual em todo o app. */
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' fill='none'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23999999' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.9rem center;
+  background-size: 10px 6px;
+  padding-right: 2.25rem !important;
+}
+
+/* Em @layer base pra ficar abaixo das utilities do Tailwind na cascata  sem isso,
+   por estar fora de qualquer layer, esse reset vence QUALQUER utility de cor aplicada
+   a um <a> (ex: text-(--brand)), não importa a especificidade do seletor. */
+@layer base {
+  a,
+  a:visited,
+  a:hover,
+  a:active,
+  a:focus {
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+@media print {
+  body * { visibility: hidden; }
+
+  #a4-print-sheet,
+  #a4-print-sheet * {
+    visibility: visible;
+  }
+
+  #a4-print-sheet {
+    position: static;
+    box-shadow: none !important;
+    margin: 0;
+  }
+
+  /* #a4-print-sheet agora é só o wrapper das folhas paginadas  cada .a4-page é uma
+     folha real (794x1123px a 96dpi = 21cm x 29.7cm), impressa em página própria. */
+  .a4-page {
+    width: 21cm;
+    height: 29.7cm;
+    box-shadow: none !important;
+    break-after: page;
+  }
+
+  .a4-page:last-child {
+    break-after: auto;
+  }
+
+  @page {
+    size: A4;
+    margin: 0;
+  }
+}

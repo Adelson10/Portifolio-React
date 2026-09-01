@@ -1,0 +1,96 @@
+.MenuvMobile_Header {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 992;
+}
+
+.MenuMobile_Close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    z-index: 996;
+}
+
+.MenuMobile_Close svg {
+    color: var(--brand-dark) !important;
+}
+
+.MenuMobile_Container_Bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 991;
+}
+
+.MenuMobile_Container_Bg_Cevada {
+    position: absolute;
+    display: block;
+    height: 100px;
+    width: 170px;
+    background-image: url('../../assets/imagens/Menu/cevada_background.png');
+    background-size: cover;
+}
+
+.MenuMobile_Container_Bg_Cevada.left {
+    left: 0;
+    transform: rotateZ(100deg) translate(55px, 40px);
+}
+
+.MenuMobile_Container_Bg_Cevada.right {
+    right: 0;
+    transform: rotateZ(-100deg) translate(-55px, 40px) scaleX(-1);
+}
+
+.MenuMobile_Container {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg);
+
+    padding: 1rem 0;
+    overflow-y: scroll;
+    position: absolute;
+    z-index: 989;
+    overflow-x: hidden;
+}
+
+.MenuMobile_Container::-webkit-scrollbar {
+    display: none;
+}
+
+.AllCatalogoProduct {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.MenuMobile_footer {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 4rem;
+}
+
+.MenuMobile_footer_Image1 {
+    width: 90px;
+    height: 100%;
+    background-image: url('../../assets/imagens/Menu/footer_01.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.MenuMobile_footer_Image1.reverse {
+    transform: scaleX(-1);
+}
+
+.MenuMobile_footer_Image2 {
+    width: 90px;
+    height: 100%;
+    background-image: url('../../assets/imagens/Menu/footer_02.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}

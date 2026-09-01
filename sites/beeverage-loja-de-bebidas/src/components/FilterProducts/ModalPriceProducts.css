@@ -1,0 +1,103 @@
+.modal-filter-products-wraper-container {
+  display: flex;
+  gap: .4rem;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  max-height: 200px;
+  transition: max-height .5s ease;
+}
+
+.modal-filter-products-wraper-container.hidden {
+  max-height: 0px;
+}
+
+.modal-filter-products-wraper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .6rem;
+}
+
+.modal-price-products-field {
+  border: 1px solid var(--brand-dark);
+  display: flex;
+  border-radius: .2rem;
+}
+
+.modal-price-products-number {
+  width: 100%;
+  padding: .2rem .4rem;
+  background: none;
+  border: none;
+  font-size: .8rem;
+  color: var(--color-secundary);
+  outline: none;
+}
+
+.modal-price-products-coin {
+  border-right: 1px solid var(--brand-dark);
+  display: inline-block;
+  padding: 0 .4rem;
+  color: var(--brand-dark);
+  font-weight: 600;
+}
+
+.modal-price-products-divide {
+  color: var(--brand-dark);
+}
+
+.modal-price-products-coin span {
+  font-size: .8rem;
+}
+
+.modal-filter-products-slider {
+  height: 9px;
+  border-radius: 2px;
+  background: white;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: .4rem 0;
+}
+
+.modal-filter-products-slider .modal-filter-products-progress {
+  height: 7px;
+  left: 25%;
+  right: 25%;
+  position: absolute;
+  border: 2px;
+  background: var(--brand-dark);
+}
+
+.modal-filter-products-ranger-input {
+  position: relative;
+}
+
+.modal-filter-products-ranger-input input {
+  position: absolute;
+  top: -20px;
+  height: 5px;
+  width: 100%;
+  background: none;
+  pointer-events: none;
+  -webkit-appearance: none;
+}
+
+.modal-filter-products-ranger-input input[type="range"]::-webkit-slider-thumb {
+  height: 17px;
+  width: 17px;
+  border-radius: .2rem;
+  pointer-events: auto;
+  -webkit-appearance: none;
+  background: var(--brand-dark);
+}
+
+.modal-filter-products-ranger-input input[type="range"]::-moz-range-thumb {
+  height: 17px;
+  width: 17px;
+  border-radius: .2rem;
+  pointer-events: auto;
+  -webkit-appearance: none;
+  background: var(--brand-dark);
+}

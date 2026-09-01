@@ -1,0 +1,14 @@
+.list-products-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+
+    background-image: linear-gradient(to left, var(--brand-dark), var(--brand));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.list-products-title::selection {
+    -webkit-text-fill-color: white;
+}
+

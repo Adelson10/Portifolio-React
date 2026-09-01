@@ -1,0 +1,79 @@
+footer {
+    width: 90%;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 50% 15% 20% 15%;
+    font-family: var(--font-one);
+    gap: .2rem;
+}
+
+.footer-container {
+    margin-bottom: 4rem;
+}
+
+.footer-container h3 {
+    margin: 0;
+}
+
+.footer-container a {
+    color: var(--color-one);
+}
+
+.footer-container a:hover {
+    color: var(--color-three);
+}
+
+.footer-container-descriptions {
+    grid-area: 2 / 1 / 2 / 5;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4rem;
+    border-top: 1px solid #002e35;
+    padding-top: .5rem;
+}
+
+.footer-container-sociais > svg{
+    padding-left: 1rem;
+}
+
+.footer-container-sociais > svg:hover {
+    cursor: pointer;
+    color: var(--color-three);
+}
+
+.footer-container-logo {
+    height: 100px;
+    width: 100px;
+    background-image: url('../../assets/icons/logo-loja.webp');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+@media (max-width: 1000px) {
+    footer {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-container {
+        margin-bottom: 1rem;
+    }
+
+    .footer-container-logo-container {
+        margin: 0 auto;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 700px) {
+    footer {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-container-descriptions {
+        grid-area: auto;
+    }
+}

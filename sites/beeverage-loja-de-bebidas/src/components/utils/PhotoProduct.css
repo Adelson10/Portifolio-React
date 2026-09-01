@@ -1,0 +1,41 @@
+.PhotoProduct_Container {
+    display: inline-flex;
+    position: relative;
+    justify-content: center;
+    align-items: end;
+    height: 170px;
+}
+
+.PhotoProduct_Container.Page {
+    height: 330px;
+    width: 330px;
+}
+
+.PhotoProduct_Photo {
+    height: 155px;
+    width: 125px;
+    position: absolute;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    bottom: 5px;
+    transition: bottom .1s ease;
+}
+
+.PhotoProduct_Photo.Page {
+    height: 310px;
+    width: 250px;
+}
+
+.shadow_product {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.274);
+    height: 13px;
+    border-radius: 50%;
+    bottom: 4px;
+    filter: blur(3px);
+}
+
+.PhotoProduct_Container:hover .PhotoProduct_Photo {
+    bottom: 15px;
+}

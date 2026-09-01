@@ -1,0 +1,44 @@
+.Profile {
+    display: flex;
+    gap: .5rem;
+    width: 50%;
+    align-items: center;
+}
+
+.Profile_Title {
+    text-align: start;
+}
+
+.Profile_Photo {
+    width: 60px;
+    height: 60px;
+    border-radius: .5rem;
+    background-color: var(--brand-dark);
+}
+
+.Profile h3 {
+    color: var(--brand-dark);
+    font-weight: 600;
+}
+
+.Profile p {
+    color: var(--brand-dark);
+}
+
+@media (min-width: 1000px) {
+    .Profile_Title {
+        text-align: end;
+        order: 1;
+    }
+
+    .Profile_Photo {
+        order: 2;
+    }
+
+    .Profile {
+        width: initial;
+        order: 4;
+    }
+
+
+}

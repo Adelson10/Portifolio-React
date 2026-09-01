@@ -1,0 +1,16 @@
+.button {
+    padding: 16px;
+    border-radius: .5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
+    font-size: .8rem;
+    color: white;
+    background: linear-gradient(-68deg, var(--brand-dark) 0%,var(--brand) 100%);
+}
+
+.button svg {
+    min-width: 1.5rem;
+}

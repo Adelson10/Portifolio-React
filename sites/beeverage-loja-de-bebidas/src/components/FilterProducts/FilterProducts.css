@@ -1,0 +1,13 @@
+.filter-products-title-itens {
+    font-size: .6rem;
+    display: inline-block;
+    margin-left: .1rem;
+    color: var(--color-primary);
+}
+
+.filter-products-title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+}
