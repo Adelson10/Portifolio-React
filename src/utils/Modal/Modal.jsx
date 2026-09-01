@@ -32,7 +32,6 @@ const Modal = () => {
                     <div>
                         <p className='Title_dateModal'>Link do Projetos<span>.</span></p>
                         <div className='botoes_Modal'>
-                            <Link to={dateModal.GitHub} target='_blank' rel='nofollow'><BsGithub />Codigo Fonte</Link>
                             <Link to={dateModal.Href} target='_blank' rel='nofollow'><BsBoxArrowRight />Projeto</Link>
                         </div>
                     </div>

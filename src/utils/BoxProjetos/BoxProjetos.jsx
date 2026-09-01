@@ -10,7 +10,7 @@ const BoxProjetos = (props) => {
 
   function handleClick() {
     document.querySelector('body').style.overflowY = 'hidden';
-    setDateModal(props);
+    setDateModal(props);  
   }
   
   return (
